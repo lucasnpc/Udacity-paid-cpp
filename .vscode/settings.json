@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "algorithm": "cpp",
         "string": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "ostream": "cpp"
+    },
+    "cmake.sourceDirectory": "C:/Users/lucas/Documents/Projects/Udacity-paid-cpp/a-star-search"
 }
