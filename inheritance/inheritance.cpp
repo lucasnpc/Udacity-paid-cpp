@@ -6,11 +6,10 @@ class Vehicle {
 public:
     int wheels = 0;
     string color = "blue";
-    int window = 0;
     
     void Print() const
     {
-        std::cout << "This " << color << " vehicle has " << wheels << " wheels and " << window << " windows!\n";
+        std::cout << "This " << color << " vehicle has " << wheels << " wheels!\n";
     }
 };
 
@@ -19,18 +18,30 @@ public:
     bool sunroof = false;
 };
 
-class Bicycle : public Vehicle {
+class Bicycle : protected Vehicle {
 public:
     bool kickstand = true;
+    void Wheels(int w)
+    {
+        wheels = w;
+    }
+};
+
+class Scooter : private Vehicle {
+public:
+    bool electric = false;
+    void Wheels(int w)
+    {
+        wheels = w;
+    }
 };
 
 int main() 
 {
     Car car;
     car.wheels = 4;
-    car.sunroof = true;
-    car.window = 4;
-    car.Print();
-    if(car.sunroof)
-        std::cout << "And a sunroof!\n";
+    Bicycle bicycle;
+    bicycle.Wheels(2);
+    Scooter scooter;
+    scooter.Wheels(1);
 };
