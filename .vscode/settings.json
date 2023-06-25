@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "chrono": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/home/lucasnpc/Udacity-paid-cpp/a-star-search"
 }
