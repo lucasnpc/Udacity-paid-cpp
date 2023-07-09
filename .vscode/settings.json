@@ -50,7 +50,10 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "hash_map": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     },
     "cmake.sourceDirectory": "/home/lucasnpc/Udacity-paid-cpp/a-star-search"
 }
