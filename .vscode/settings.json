@@ -56,7 +56,9 @@
         "thread": "cpp",
         "condition_variable": "cpp",
         "future": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "complex": "cpp",
+        "cstring": "cpp"
     },
     "cmake.sourceDirectory": "/home/lucasnpc/Udacity-paid-cpp/a-star-search",
     "C_Cpp.errorSquiggles": "enabled"
