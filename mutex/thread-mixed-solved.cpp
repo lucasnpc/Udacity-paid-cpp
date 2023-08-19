@@ -3,7 +3,7 @@
 #include <vector>
 #include <future>
 #include <mutex>
-#include<algorithm>
+#include <algorithm>
 
 std::mutex mtx;
 double result;
@@ -19,10 +19,10 @@ void divideByNumber(double num, double denom)
     try
     {
         // divide num by denom but throw an exception if division by zero is attempted
-        if (denom != 0) 
+        if (denom != 0)
         {
             result = num / denom;
-            std::this_thread::sleep_for(std::chrono::milliseconds(1)); 
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
             printResult(denom);
         }
         else
@@ -30,11 +30,11 @@ void divideByNumber(double num, double denom)
             throw std::invalid_argument("Exception from thread: Division by zero!");
         }
     }
-    catch (const std::invalid_argument &e)
+    catch (const std::invalid_argument& e)
     {
         // notify the user about the exception and return
         std::cout << e.what() << std::endl;
-        return; 
+        return;
     }
     mtx.unlock();
 }
@@ -49,9 +49,9 @@ int main()
     }
 
     // wait for the results
-    std::for_each(futures.begin(), futures.end(), [](std::future<void> &ftr) {
+    std::for_each(futures.begin(), futures.end(), [](std::future<void>& ftr) {
         ftr.wait();
-    });
+        });
 
     return 0;
 }
